@@ -1,0 +1,51 @@
+/* Loaded after the application styles so mobile shell rules always take effect. */
+@media screen and (max-width: 800px) {
+  html, body, #root { width: 100%; min-width: 320px; max-width: 100%; overflow-x: hidden; }
+  .app-shell { width: 100%; min-width: 0; overflow-x: clip; }
+  .app-shell > .sidebar { display: none !important; }
+  .app-shell > .mobile-header { display: flex !important; width: 100%; }
+  .app-shell > .main-content { width: 100% !important; max-width: 100%; min-width: 0; margin-left: 0 !important; padding-left: 16px; padding-right: 16px; }
+  .app-shell .desktop-utility { display: none !important; }
+  .app-shell > .bottom-nav { display: grid !important; width: 100%; }
+  .page, .page > *, .dashboard-columns, .chart-grid, .settings-card, .journal-form { min-width: 0; max-width: 100%; }
+  .journal-page { width: 100%; }
+}
+
+@media screen and (max-width: 430px) {
+  .app-shell > .main-content { padding-left: 12px; padding-right: 12px; padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .mobile-header { padding-left: 12px; padding-right: 12px; }
+  .page { padding-top: 20px; }
+  .page-header h1 { font-size: clamp(2.25rem, 10vw, 3rem); }
+  .welcome-hero { height: auto; min-height: 245px; padding: 24px 18px; }
+  .welcome-hero h1 { font-size: clamp(2.3rem, 10vw, 3rem); max-width: 80%; }
+  .today-card { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; padding: 16px; }
+  .today-card .button { grid-column: 1 / -1; width: 100%; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .stat-card { min-width: 0; padding: 12px 9px; gap: 8px; }
+  .stat-card strong { overflow-wrap: anywhere; }
+  .journal-header { text-align: center; }
+  .journal-header h1 { font-size: clamp(2rem, 9vw, 2.75rem); }
+  .reflection-field { grid-template-columns: 20px minmax(0, 1fr); gap: 8px; padding: 16px 12px; }
+  .reflection-copy, .reflection-copy textarea { min-width: 0; width: 100%; }
+  .mood-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .save-panel { bottom: calc(68px + env(safe-area-inset-bottom)); }
+  .filter-bar { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .search-box { grid-column: 1 / -1; min-width: 0; }
+  .select-wrap { min-width: 0; padding: 0 8px; }
+  .select-wrap select { min-width: 0; width: 100%; }
+  .calendar-panel:not(.compact) { min-width: 0; padding: 10px; }
+  .chart-card { min-width: 0; padding: 16px 12px; }
+  .chart-area { min-width: 0; height: 220px; }
+  .entry-sheet { min-width: 0; padding: 24px 16px; }
+  .entry-sections section { grid-template-columns: 28px minmax(0, 1fr); }
+  .toast-stack { left: 10px; right: 10px; }
+  .toast { min-width: 0; width: 100%; }
+  .modal { width: 100%; }
+}
+
+@media screen and (max-width: 360px) {
+  .stats-grid { grid-template-columns: minmax(0, 1fr); }
+  .welcome-hero h1 { max-width: 100%; }
+  .reflection-copy label { font-size: 1.15rem; }
+  .bottom-nav a { font-size: .58rem; }
+}
